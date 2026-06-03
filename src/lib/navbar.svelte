@@ -1,4 +1,5 @@
 <script lang="ts">
+  let isScrolled = $state(false)
     const sections = [
       "services",
       "portfolio",
@@ -12,9 +13,15 @@
       const el= document.getElementById(id)
       if (el) el.scrollIntoView({behavior: 'smooth'})
     };
+
+  $effect(()=> {
+    const handler = () => {isScrolled = window.scrollY > 20}
+    window.addEventListener('scroll', handler)
+    return () => window.removeEventListener('scroll', handler)
+  })
   </script>
   
-  <header>
+  <header class:isScrolled>
     <button
       class="logo-btn"
       onclick={() => scrollTo("hero")}
@@ -32,9 +39,22 @@
   
   <style>
     header {
+      position: fixed ;
+      top:0;
+      left:0;
+      height: 3rem;
+      width: 100vw;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      z-index: 50;
+      transition: background-color 0.3s, box-shadow 0.3s , padding 0.3s;
+    }
+
+    header.isScrolled{
+      background-color: grey;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      padding: 10px 0;
     }
   
     nav {

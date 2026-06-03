@@ -17,10 +17,10 @@
   <div class="hero-content">
     <p class="badge">Est. 2019 · Philippines</p>
     <h1 class='slogan'>
-      Capture the Moments <span style='color:#BD6628'>That Matter</span>
+     Moments made <span style='color:#BD6628'>Timeless</span>
     </h1>
     <p class="tagline">
-      Instant polaroid photography for weddings, corporate events,<br class="desktop-br" />
+      Instant polaroid photography for weddings, corporate events,
       anniversaries, and every gathering worth remembering.
     </p>
     <div class="hero-actions">
@@ -81,7 +81,7 @@
   .hero {
     position: relative;
     min-height: 100vh;
-    background: #37353E;
+    background: #ffffff;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -91,8 +91,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 70% 50%, rgba(189,102,40,0.15) 0%, transparent 60%),
-      radial-gradient(ellipse at 20% 80%, rgba(189,102,40,0.08) 0%, transparent 50%);
+      radial-gradient(ellipse at 70% 50%, rgba(16, 103, 209, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(16, 103, 209, 0.15) 0%, transparent 50%);
   }
 
   /* .film-strip {
@@ -164,6 +164,8 @@
     line-height: 1.6;
     margin: 0 0 36px;
     animation: fadeUp 0.8s 0.2s ease both;
+    text-align: left;
+    
   }
 
   .hero-actions {
