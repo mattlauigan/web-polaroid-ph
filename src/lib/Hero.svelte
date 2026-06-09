@@ -349,11 +349,11 @@
     50% { opacity: 1; transform: scaleY(1.3); }
   }
 
-  .desktop-br { display: block; }
+  /* .desktop-br { display: block; } */
 
   @media (max-width: 900px) {
     .polaroid-float { display: none; }
-    .desktop-br { display: none; }
+    /* .desktop-br { display: none; } */
     .hero-content { padding: 100px 24px 80px; }
   }
 
